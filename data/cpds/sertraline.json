@@ -1,0 +1,14 @@
+{
+    "compounds": [
+        {
+            "primary_id": "80812",
+            "primary_db": "CECScreen",
+            "name": "Sertraline",
+            "neutral_formula": "C17H17Cl2N",
+            "neutral_formula_mass": 305.073805,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        }
+    ]
+}

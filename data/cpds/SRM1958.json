@@ -1,0 +1,1054 @@
+{
+    "compounds": [
+        {
+            "primary_id": "SRM_0",
+            "primary_db": "SRM1958",
+            "name": "2,2\u2019,5-Trichlorobiphenyl",
+            "neutral_formula": "C12H7Cl3",
+            "neutral_formula_mass": 255.961333272783,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_1",
+            "primary_db": "SRM1958",
+            "name": "2,4,4'-Trichlorobiphenyl",
+            "neutral_formula": "C12H7Cl3",
+            "neutral_formula_mass": 255.961333272783,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_2",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,5'-Tetrachlorobiphenyl",
+            "neutral_formula": "C12H6Cl4",
+            "neutral_formula_mass": 289.922360922914,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_3",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,5'-Tetrachlorobiphenyl",
+            "neutral_formula": "C12H6Cl4",
+            "neutral_formula_mass": 289.922360922914,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_4",
+            "primary_db": "SRM1958",
+            "name": "2,2',5,5'-Tetrachlorobiphenyl",
+            "neutral_formula": "C12H6Cl4",
+            "neutral_formula_mass": 289.922360922914,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_5",
+            "primary_db": "SRM1958",
+            "name": "2,3',4,4'-Tetrachlorobiphenyl",
+            "neutral_formula": "C12H6Cl4",
+            "neutral_formula_mass": 289.922360922914,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_6",
+            "primary_db": "SRM1958",
+            "name": "2,4,4',5-Tetrachlorobiphenyl",
+            "neutral_formula": "C12H6Cl4",
+            "neutral_formula_mass": 289.922360922914,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_7",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4,5'-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_8",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4',5-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_9",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,5,5'-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_10",
+            "primary_db": "SRM1958",
+            "name": "2,3,3',4,4'-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_11",
+            "primary_db": "SRM1958",
+            "name": "2,3,3',4',6-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_12",
+            "primary_db": "SRM1958",
+            "name": "2,3',4,4',5-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_13",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,4'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_14",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4,4',5'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_15",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4',5,5'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_16",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4',5',6-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_17",
+            "primary_db": "SRM1958",
+            "name": "2,3,3',4,4'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_18",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4',5,5'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_19",
+            "primary_db": "SRM1958",
+            "name": "2,3,3',4,4',5-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_20",
+            "primary_db": "SRM1958",
+            "name": "2,3,3',4,4',5'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_21",
+            "primary_db": "SRM1958",
+            "name": "2,3,3',4,4',5'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_22",
+            "primary_db": "SRM1958",
+            "name": "2,3',4,4',5,5'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_23",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,4',5-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_24",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,5,5'-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_25",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3', 4',5,6-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_26",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',5,5',6-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_27",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4, 4',5,5'-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_28",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4,4',5',6-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_29",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4',5,5',6-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_30",
+            "primary_db": "SRM1958",
+            "name": "2,3,3',4,4',5,5'-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_31",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,4',5,5'-Octachlorobiphenyl",
+            "neutral_formula": "C12H2Cl8",
+            "neutral_formula_mass": 425.766471523438,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_32",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,4',5,6-Octachlorobiphenyl",
+            "neutral_formula": "C12H2Cl8",
+            "neutral_formula_mass": 425.766471523438,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_33",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,4',5,6'-Octachlorobiphenyl",
+            "neutral_formula": "C12H2Cl8",
+            "neutral_formula_mass": 425.766471523438,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_34",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,5,5',6'-Octachlorobiphenyl",
+            "neutral_formula": "C12H2Cl8",
+            "neutral_formula_mass": 425.766471523438,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_35",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4,4',5,5',6-Octachlorobiphenyl",
+            "neutral_formula": "C12H2Cl8",
+            "neutral_formula_mass": 425.766471523438,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_36",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,4',5,5',6-Nonachlorobiphenyl",
+            "neutral_formula": "C12H1Cl9",
+            "neutral_formula_mass": 459.72749917356896,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_37",
+            "primary_db": "SRM1958",
+            "name": "Decachlorobiphenyl",
+            "neutral_formula": "C12H10",
+            "neutral_formula_mass": 154.07825032239,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_38",
+            "primary_db": "SRM1958",
+            "name": "Hexachlorobenzene",
+            "neutral_formula": "C6Cl6",
+            "neutral_formula_mass": 281.81311609422,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_39",
+            "primary_db": "SRM1958",
+            "name": "cis-Chlordane",
+            "neutral_formula": "C10H6Cl8",
+            "neutral_formula_mass": 405.797771652394,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_40",
+            "primary_db": "SRM1958",
+            "name": "trans-Chlordane",
+            "neutral_formula": "C10H6Cl8",
+            "neutral_formula_mass": 405.797771652394,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_41",
+            "primary_db": "SRM1958",
+            "name": "cis-Nonachlor ",
+            "neutral_formula": "C10H5Cl9",
+            "neutral_formula_mass": 439.75879930252495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_42",
+            "primary_db": "SRM1958",
+            "name": "trans-Nonachlor ",
+            "neutral_formula": "C10H5Cl9",
+            "neutral_formula_mass": 439.75879930252495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_43",
+            "primary_db": "SRM1958",
+            "name": "Mirex",
+            "neutral_formula": "C10Cl12",
+            "neutral_formula_mass": 539.62623218844,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_44",
+            "primary_db": "SRM1958",
+            "name": "Octachlorostyrene",
+            "neutral_formula": "C8Cl8",
+            "neutral_formula_mass": 375.75082145896,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_45",
+            "primary_db": "SRM1958",
+            "name": "2,4'-DDE",
+            "neutral_formula": "C14H8Cl4",
+            "neutral_formula_mass": 315.938010987392,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_46",
+            "primary_db": "SRM1958",
+            "name": "4,4'-DDE",
+            "neutral_formula": "C14H8Cl4",
+            "neutral_formula_mass": 315.938010987392,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_47",
+            "primary_db": "SRM1958",
+            "name": "2,4'-DDD",
+            "neutral_formula": "C14H10Cl4",
+            "neutral_formula_mass": 317.95366105187,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_48",
+            "primary_db": "SRM1958",
+            "name": "2,4\u2019-DDT",
+            "neutral_formula": "C14H9Cl5",
+            "neutral_formula_mass": 351.914688702001,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_49",
+            "primary_db": "SRM1958",
+            "name": "2,2',4-Tribromodiphenyl ether ",
+            "neutral_formula": "C12H7Br3O",
+            "neutral_formula_mass": 403.80470268724474,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_50",
+            "primary_db": "SRM1958",
+            "name": "2,4,4'-Tribromodiphenyl ether",
+            "neutral_formula": "C12H7Br3O",
+            "neutral_formula_mass": 403.80470268724474,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_51",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4'-Tetrabromodiphenyl ether ",
+            "neutral_formula": "C12H6Br4O",
+            "neutral_formula_mass": 481.7152152690057,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_52",
+            "primary_db": "SRM1958",
+            "name": "2,3',4,4'-Tetrabromodiphenyl ether",
+            "neutral_formula": "C12H6Br4O",
+            "neutral_formula_mass": 481.7152152690057,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_53",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4,4'-Pentabromodiphenyl ether ",
+            "neutral_formula": "C12H5Br5O",
+            "neutral_formula_mass": 559.6257278507666,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_54",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4',5-Pentabromodiphenyl ether ",
+            "neutral_formula": "C12H5Br5O",
+            "neutral_formula_mass": 559.6257278507666,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_55",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4',6-Pentabromodiphenyl ether",
+            "neutral_formula": "C12H5Br5O",
+            "neutral_formula_mass": 559.6257278507666,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_56",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4',5,5'-Hexabromodiphenyl ether",
+            "neutral_formula": "C12H4Br6O",
+            "neutral_formula_mass": 637.5362404325276,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_57",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4',5,6'-Hexabromodiphenyl ether",
+            "neutral_formula": "C12H4Br6O",
+            "neutral_formula_mass": 637.5362404325276,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_58",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4,4',5',6-Heptabromodiphenyl ether",
+            "neutral_formula": "C12H3Br7O",
+            "neutral_formula_mass": 715.4467530142887,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_59",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,4',5,5',6-Nonabromodiphenyl ether",
+            "neutral_formula": "C12HBr9O",
+            "neutral_formula_mass": 871.2677781778106,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_60",
+            "primary_db": "SRM1958",
+            "name": "Decabromodiphenyl ether ",
+            "neutral_formula": "C12Br10O",
+            "neutral_formula_mass": 949.1782907595716,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_61",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4',5,5'-Hexabromobiphenyl",
+            "neutral_formula": "C12H4Br6",
+            "neutral_formula_mass": 621.541325812956,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_62",
+            "primary_db": "SRM1958",
+            "name": "2,3,4,4',5-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_63",
+            "primary_db": "SRM1958",
+            "name": "2',3,4,4',5-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_64",
+            "primary_db": "SRM1958",
+            "name": "2,2',4,4',5,5'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_65",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,3',4,6'-Hexachlorobiphenyl",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_66",
+            "primary_db": "SRM1958",
+            "name": "2,2',3,4, 4',5,5'-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_67",
+            "primary_db": "SRM1958",
+            "name": "2,3,3', 4',5,5',6-Heptachlorobiphenyl",
+            "neutral_formula": "C12H3Cl7",
+            "neutral_formula_mass": 391.805443873307,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_68",
+            "primary_db": "SRM1958",
+            "name": "2,4,4'-Tribromodiphenyl ether",
+            "neutral_formula": "C12H7Br3O",
+            "neutral_formula_mass": 403.80470268724474,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_69",
+            "primary_db": "SRM1958",
+            "name": "2, 4',5-Tribromodiphenyl ether",
+            "neutral_formula": "C12H7Br3O",
+            "neutral_formula_mass": 403.80470268724474,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_70",
+            "primary_db": "SRM1958",
+            "name": "Pentachlorophenol",
+            "neutral_formula": "C6HCl5O",
+            "neutral_formula_mass": 263.8470030636607,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_71",
+            "primary_db": "SRM1958",
+            "name": "Pentabromophenol",
+            "neutral_formula": "C6HBr5O",
+            "neutral_formula_mass": 483.5944277218107,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_72",
+            "primary_db": "SRM1958",
+            "name": "\u03b1-HCH",
+            "neutral_formula": "C6H6Cl6",
+            "neutral_formula_mass": 287.860066287654,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_73",
+            "primary_db": "SRM1958",
+            "name": "\u03b2-HCH ",
+            "neutral_formula": "C6H6Cl6",
+            "neutral_formula_mass": 287.860066287654,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_74",
+            "primary_db": "SRM1958",
+            "name": "\u03b3-HCH",
+            "neutral_formula": "C6H6Cl6",
+            "neutral_formula_mass": 287.860066287654,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_75",
+            "primary_db": "SRM1958",
+            "name": "Pentadecafluorooctanoic acid (PFOA) ",
+            "neutral_formula": "C8HF15O2",
+            "neutral_formula_mass": 413.9737017124704,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_76",
+            "primary_db": "SRM1958",
+            "name": "Heptadecafluorononanoic acid (PFNA)",
+            "neutral_formula": "C9HF17O2",
+            "neutral_formula_mass": 463.9705080379488,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_77",
+            "primary_db": "SRM1958",
+            "name": "Perfluorohexanesulfonic acid (PFHxS) ",
+            "neutral_formula": "C6HF13O3S",
+            "neutral_formula_mass": 399.9438811809777,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_78",
+            "primary_db": "SRM1958",
+            "name": "Perfluorooctanesulfonic acid (PFOS) ",
+            "neutral_formula": "C8HF17O3S",
+            "neutral_formula_mass": 499.9374938319345,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_79",
+            "primary_db": "SRM1958",
+            "name": "2,3,7,8-Tetrachlorodibenzo-p-dioxin",
+            "neutral_formula": "C12H4Cl4O2",
+            "neutral_formula_mass": 319.89654009757936,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_80",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,7,8-Pentachlorodibenzo-p-dioxin",
+            "neutral_formula": "C12H3Cl5O2",
+            "neutral_formula_mass": 353.85756774771033,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_81",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin",
+            "neutral_formula": "C12H2Cl6O2",
+            "neutral_formula_mass": 387.81859539784136,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_82",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin",
+            "neutral_formula": "C12H2Cl6O2",
+            "neutral_formula_mass": 387.81859539784136,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_83",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,7,8,9-Hexachlorodibenzo-p-dioxin ",
+            "neutral_formula": "C12H2Cl6O2",
+            "neutral_formula_mass": 387.81859539784136,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_84",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,4,6,7,8-Heptachlorodibenzo-p-dioxin ",
+            "neutral_formula": "C12HCl7O2",
+            "neutral_formula_mass": 421.7796230479724,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_85",
+            "primary_db": "SRM1958",
+            "name": "Octachlorodibenzo-p-dioxin ",
+            "neutral_formula": "C12Cl8O2",
+            "neutral_formula_mass": 455.74065069810337,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_86",
+            "primary_db": "SRM1958",
+            "name": "2,3,7,8-Tetrachlorodibenzofuran",
+            "neutral_formula": "C12H4Cl4O",
+            "neutral_formula_mass": 303.9016254780077,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_87",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,7,8-Pentachlorodibenzofuran",
+            "neutral_formula": "C12H3Cl5O",
+            "neutral_formula_mass": 337.8626531281387,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_88",
+            "primary_db": "SRM1958",
+            "name": "2,3,4,7,8-Pentachlorodibenzofuran ",
+            "neutral_formula": "C12H3Cl5O",
+            "neutral_formula_mass": 337.8626531281387,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_89",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,4,7,8-Hexachlorodibenzofuran",
+            "neutral_formula": "C12H2Cl6O",
+            "neutral_formula_mass": 371.8236807782697,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_90",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,6,7,8-Hexachlorodibenzofuran ",
+            "neutral_formula": "C12H2Cl6O",
+            "neutral_formula_mass": 371.8236807782697,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_91",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,7,8,9-Hexachlorodibenzofuran",
+            "neutral_formula": "C12H2Cl6O",
+            "neutral_formula_mass": 371.8236807782697,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_92",
+            "primary_db": "SRM1958",
+            "name": "2,3,4,6,7,8-Hexachlorodibenzofuran",
+            "neutral_formula": "C12H2Cl6O",
+            "neutral_formula_mass": 371.8236807782697,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_93",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,4,6,7,8-Heptachlorodibenzofuran ",
+            "neutral_formula": "C12HCl7O",
+            "neutral_formula_mass": 405.78470842840073,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_94",
+            "primary_db": "SRM1958",
+            "name": "1,2,3,4,7,8,9-Heptachlorodibenzofuran ",
+            "neutral_formula": "C12HCl7O",
+            "neutral_formula_mass": 405.78470842840073,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_95",
+            "primary_db": "SRM1958",
+            "name": "Octachlorodibenzofuran",
+            "neutral_formula": "C12Cl8O",
+            "neutral_formula_mass": 439.7457360785317,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_96",
+            "primary_db": "SRM1958",
+            "name": "3,4,5,3',4'-Pentachlorobiphenyl",
+            "neutral_formula": "C12H5Cl5",
+            "neutral_formula_mass": 323.88338857304495,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_97",
+            "primary_db": "SRM1958",
+            "name": "3,4,5,3',4',5'-Hexachlorobiphenyl ",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_98",
+            "primary_db": "SRM1958",
+            "name": "2-endo,3-exo,5-endo,6-exo,8,8,10,10 octachlorobornane",
+            "neutral_formula": "C10H10Cl8",
+            "neutral_formula_mass": 409.82907178134997,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_99",
+            "primary_db": "SRM1958",
+            "name": "2-endo,3-exo,5-endo,6-exo,8,8,9,10,10 nonachlorobornane",
+            "neutral_formula": "C10H9Cl9",
+            "neutral_formula_mass": 443.79009943148094,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_100",
+            "primary_db": "SRM1958",
+            "name": "2,2,5,5,8,9,9,10,10 nonachlorobornane",
+            "neutral_formula": "C10H9Cl9",
+            "neutral_formula_mass": 443.79009943148094,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_101",
+            "primary_db": "SRM1958",
+            "name": "Pentachloronitrobenzene",
+            "neutral_formula": "C6Cl5NO2",
+            "neutral_formula_mass": 292.8371666554254,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_102",
+            "primary_db": "SRM1958",
+            "name": "2,3,4,6-Tetrabromophenol",
+            "neutral_formula": "C6H2Br4O",
+            "neutral_formula_mass": 405.6839151400497,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_103",
+            "primary_db": "SRM1958",
+            "name": "2,3,4,6-Tetrachlorophenol",
+            "neutral_formula": "C6H2Cl4O",
+            "neutral_formula_mass": 229.88597541352968,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        },
+        {
+            "primary_id": "SRM_104",
+            "primary_db": "SRM1958",
+            "name": "Aroclor 1260",
+            "neutral_formula": "C12H4Cl6",
+            "neutral_formula_mass": 357.844416223176,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        }
+    ]
+}

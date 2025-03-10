@@ -1,0 +1,14 @@
+{
+    "compounds": [
+        {
+            "primary_id": "58702",
+            "primary_db": "Custom",
+            "name": "Metropolol",
+            "neutral_formula": "C15H25NO3",
+            "neutral_formula_mass": 267.183444,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        }
+    ]
+}

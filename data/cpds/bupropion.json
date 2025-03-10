@@ -1,0 +1,14 @@
+{
+    "compounds": [
+        {
+            "primary_id": "58702",
+            "primary_db": "Custom",
+            "name": "Bupropion",
+            "neutral_formula": "C13H18Cl1N1O",
+            "neutral_formula_mass": 239.107692,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        }
+    ]
+}

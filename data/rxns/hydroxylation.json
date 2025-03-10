@@ -1,0 +1,26 @@
+{
+    "reactions":
+    [
+        {
+            "elemental_difference": "O",
+            "reaction_name": "Oxidation|hydroxylation",
+            "mass_delta": 15.994915,
+            "frequency": 87,
+            "manually_curated": "yes",
+            "formula_dict": {
+                "O": 1
+            }
+        },
+        {
+            "elemental_difference": "CH3",
+            "reaction_name": "demethylation",
+            "mass_delta": 15.994915,
+            "frequency": 87,
+            "manually_curated": "yes",
+            "formula_dict": {
+                "C": 1,
+                "H": 3
+            }
+        }
+    ]
+}

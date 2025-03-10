@@ -1,0 +1,14 @@
+{
+    "compounds": [
+        {
+            "primary_id": "80812",
+            "primary_db": "CECScreen",
+            "name": "(S)-Warfarin",
+            "neutral_formula": "C19H16O4",
+            "neutral_formula_mass": 308.104859,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        }
+    ]
+}
