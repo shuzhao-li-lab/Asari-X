@@ -5,6 +5,7 @@ from tkinter import scrolledtext, messagebox, filedialog
 import threading
 from contextlib import redirect_stdout, redirect_stderr
 
+# todo - refactor to use only a single tk root.
 def select_directory(params):
     root = tk.Tk()
     root.withdraw()
@@ -13,7 +14,7 @@ def select_directory(params):
     root.destroy()
     return params
 
-def parameter_selection(params, filter=None):
+def parameter_selection(params):
     result = {}
     def run_callback():
         nonlocal result

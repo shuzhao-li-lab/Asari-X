@@ -75,8 +75,15 @@ class SignatureGenerator():
         return all_reactions
 
     def generate_signatures(self, reaction_depth=3):
+        assert self.signatures is None, "signatures already generated or provided"    
+        self.signatures = []
         reactions = self.cartesian_product_reactions(reaction_depth)
         
+
+    def save_signatures(self, signature_path):
+        assert self.signatures is not None, "cannot save null signatures"
+
+
 class Reactor():
     def __init__(self):
         self.uuid_map = {}

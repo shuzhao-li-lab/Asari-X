@@ -20,12 +20,16 @@ Installation
 
 Asari-X can be installed using pip:
 
-<ADD INSTRUCTIONS>
+`pip3 install asarix`
 
-Or from source. Installation on Anaconda is not supported. 
+Alternatively, you can install from source using `pip3 install <asarix_package_dir>`.
 
-Workflows and Algorithms
-========================
+Anaconda is not explicitly supported.
+
+Installation will add two scripts on your local path to interact with Asari-X. First is the CLI which is accessibly by running `asarix`, the second is a basic GUI which can be reached at `asarix-gui`. GUI is provided for convenience; however, is currently not officially supported yet. 
+
+Usage and Quick Start
+=====================
 
 The Asari-X workflow consists of two steps: 
 
@@ -40,32 +44,44 @@ empirical signature database or your own.
 In step 2, compound signatures are extracted from either: a) centroided
 mzML files or b) asari processed feature tables. Option A offers maximal sensitivity but B will provide information on a feature level. 
 
+See below for instructions on each step.
+
+What is a Signature
+===================
+
+A signature is the searchable unit in Asari-X. A signature minimally has an m/z value to search for and can be related to a parent compound or metabolite via metadata fields. Below are examples of signatures:
+
+Minimal Example
+-
+<EXAMPLE 1>
+
+Generated Example
+-
+This will be the resulting format from using the signature generator
+
+<EXAMPLE 2>
+
+Complex Example
+-
+An example of a qualified signature that can be passed manually.
+
+<EXAMPLE 3>
+
+
 Signature Generation
 ====================
 
-# To Be Added
+Signatures can be manually generated and provided to the search step (see below) or first signatures can be generated de novo from input compounds and reactions. Currently, the reaction logic is very simple and formula based only i.e., it does not consider the feasibility of the reactions based on structure. The number of reaction steps is bounded by an integer, the reaction depth, which specifies the maximum number of reactions that can be chained together. 
 
+Note that many reaction chains yield degenerate or redundant combinations.
 
-Signature Search and Scoring
-============================
+Signatures are generated using the 'build_signatures' command, this requires also passing a list of reactions, compounds, and a target to save the resulting signatures to. 
 
-# mzML Search
+Here is an example:
 
-# Asari Feature Table Search
+`python3 ./asarix/main.py build_signatures -i . -r "<PATH_TO_RXN.json>" -c "<PATH_TO_CPD.json>" -s "<SIGNATURE_PATH.json>"`
 
-Data Input Types (GC or LC)
-===========================
+This will react each cpd in PATH_TO_CPD.json with each permutation of reactions with a magnitude of reaction_depth or less in PATH_TO_RNX.json and save them at the specified SIGNATURE_PATH.json file for use in signature search and scoring. 
 
-# Need to think about this more
-
-
-Use 
-===
-Help information:
-
-`python3 -m xasari.main`
-
-To process all mzML files under directory mydir/projectx_dir:
-
-`python3 -m xasari.main --ref referenceDatabase.json --input mydir/projectx_dir --para mydir/projectx_dir/parameters.json`
-
+Signature Search
+================
