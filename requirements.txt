@@ -1,0 +1,3 @@
+tqdm
+mass2chem
+numpy

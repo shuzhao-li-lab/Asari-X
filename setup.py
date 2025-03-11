@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-with open("xasari/__init__.py") as f:
+with open("asarix/__init__.py") as f:
     exec([x for x in f.readlines() if '__version__' in x][0])
 
 with open("README.md", "r") as fh:
@@ -41,7 +41,7 @@ setup(
   include_package_data=True,
   zip_safe=True,
   entry_points = {
-        'console_scripts': ['xasari=xasari.main:cli', 'xasari-gui=xasari.gui:main_gui'],
+        'console_scripts': ['asarix=asarix.main:cli', 'asarix-gui=asarix.gui:main_gui'],
     },
 
   python_requires='>=3.7',

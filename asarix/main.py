@@ -58,22 +58,19 @@ def process_params(params, args=None):
         """
         if args is not None:
             for key, value in args.__dict__.items():
-                if isinstance(value, str):
-                    if value.endswith(".json"):
-                        abs_path = os.path.abspath(value)
-                        if os.path.exists(abs_path):
-                            data = json.load(open(abs_path))
-                            params[key]['value'] = data['data']
-                            if 'metadata' in data:
-                                params[f"__{key}_metadata"] = data['metadata']
-                            params[key]['source'] = value
-                            params[key]['types'] = [type(data['data'])]
-                        else:
-                            params[key]['value'] = value
-                    else:
-                        params[key]['value'] = value
-                else:
-                    params[key]['value'] = value
+                params[key]['value'] = value
+
+        for key, value in list(params.items()):
+            if isinstance(value['value'], str) and value['value'].endswith(".json") and not value.get('skip_json', False):
+                abs_path = os.path.abspath(value['value'])
+                if os.path.exists(abs_path):
+                    data = json.load(open(abs_path))
+                    params[key]['source'] = value['value']
+                    params[key]['value'] = data['data']
+                    if 'metadata' in data:
+                        params[f"__{key}_metadata"] = data['metadata']
+                    params[key]['types'] = [type(data['data'])]
+
         if params.get('parameters', {}).get('value', None) is not None:
             with open(params['parameters']) as param_fh:
                 for key, value in param_fh.items():
@@ -182,10 +179,11 @@ def main(params, dry_run=False):
         pass
 
     # Look at all callables in locals() and pick those whose qualname does not start with __"
+    logging.info(f"Starting Asari-X Run")
     subcommand_func_objs = [x for x in locals().values() if callable(x) and not x.__name__.startswith("__")]
     if dry_run:
         return {x.__name__ for x in subcommand_func_objs}
-    logging.info(f"PARAMS for RUN:\n{json.dumps(params, indent=4)}")
+    logging.info(f"PARAMS for RUN:\n{json.dumps({k: v for k, v in params.items() if k not in {'compounds', 'reactions', 'signatures'}}, indent=4)}")
     assert params['run'] in {x.__name__ for x in subcommand_func_objs}
     return {x.__name__: x for x in subcommand_func_objs}[params["run"]](params)
 

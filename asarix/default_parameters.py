@@ -6,6 +6,11 @@ PARAMETERS = {
         "types": [str],
         "metavar": True,
     },
+    "parameters": {
+        "default": None,
+        "types": [str, type(None)],
+        "short": "-p",
+    },
     "mode": {
         "default": "pos",
         "types": [str],
@@ -14,7 +19,7 @@ PARAMETERS = {
     },
     "input": {
         "default": None,
-        "types": [str],
+        "types": [str, type(None)],
         "short": '-i'
     },
     "compounds": {
@@ -31,5 +36,11 @@ PARAMETERS = {
         "default": 3,
         "types": [int, type(None)],
         "short": '-d'
+    },
+    "signature_path": {
+        "default": None,
+        "types": [str, type(None)],
+        "short": '-s',
+        "skip_json": True
     }
 }
