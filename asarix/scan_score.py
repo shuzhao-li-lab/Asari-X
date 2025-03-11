@@ -1,16 +1,23 @@
-import json
+"""
+This module implements the methods needed to perform scan scoring using the 
+consecutive scan set method described in README.md.
+"""
+
 import os
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-from utils import consecutive_scans
-from scipy.stats import spearmanr
-import tqdm
 import logging
+import json
 import multiprocessing as mp
+import numpy as np
+import tqdm
+
+from scipy.stats import spearmanr
+from asarix.utils import consecutive_scans
 
 
 class mzML_Search_Scorer():
+    """
+    This object implements the mzML search scoring
+    """
     def __init__(self, snr_cutoff=None, scan_cutoff=None, scan_files=None):
         self.frequencies = {}
         self.max_scans = {}
@@ -67,7 +74,7 @@ class mzML_Search_Scorer():
             params (dict): Asari-X 
 
         Returns:
-            _type_: _description_
+            mzML_Search_Scorer: _description_
         """
 
         scan_files = mzML_Search_Scorer.filter_inputs(params['input'], extension_filter=".scans_ASARIX.json")

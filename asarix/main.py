@@ -1,18 +1,26 @@
+"""
+This is the primary Asari-X script. The CLI, API and GUI should all target the 
+main function here.
+
+This is the entrypoint to all operations and all workflows. When executed as a 
+script, it will instantiate the CLI.
+
+"""
+
 import argparse
 import json
 import logging
 import os
 
-from default_parameters import PARAMETERS
-from utils import logo
-from signature_generator import SignatureGenerator
-from scan_search import mzML_Searcher
-from scan_score import mzML_Search_Scorer
+from asarix.default_parameters import PARAMETERS
+from asarix.utils import logo
+from asarix.signature_generator import SignatureGenerator
+from asarix.scan_search import mzML_Searcher
+from asarix.scan_score import mzML_Search_Scorer
 
-from logger_setup import setup_logger
+from asarix.logger_setup import setup_logger
 setup_logger()
 logger = logging.getLogger(__name__)
-
 
 def check_sufficient_params(params, needed=None):
     """
@@ -184,24 +192,45 @@ def main(params, dry_run=False):
         The input must be a path to either an individual mzML file or a directory with multiple 
         such files. 
 
+        Args:
+            params (dict): Asari-X params dict
         """
-        check_sufficient_params(params, ['input', 'signatures', 'mz_tolerance_ppm'])
-        if isinstance(params['signatures'], str) and params['signatures'].endswith('json'):
-            params['signatures'] = json.load(open(params['signatures']))['data']
-        XS = mzML_Searcher.from_params(params)
-        XS.search()
+        try:
+            check_sufficient_params(params, ['input', 'signatures', 'mz_tolerance_ppm'])
+            if isinstance(params['signatures'], str) and params['signatures'].endswith('json'):
+                params['signatures'] = json.load(open(params['signatures']))['data']
+            XS = mzML_Searcher.from_params(params)
+            XS.search()
+            return (1, None)
+        except Exception as e:
+            print(f"Error Executing mzml_search:\n {e}")
+            return (0, e)
+
 
     def mzml_search_score(params):
-        print("Scoring")
-        S = mzML_Search_Scorer.from_params(params)
-        print(S)
-        S.score()
+        """
+        This method is one of the two scoring methods in Asari-X.
+
+        Using the scans identified from the mzml_search above, find regions of signal that are unlikely
+        to be random and use their correlation patterns and probabilities to calculate scores. 
+
+        Args:
+            params (dict): Asari-X params dict
+        """
+        try:
+            check_sufficient_params(params, ['input', 'snr_cutoff', 'scan_cutoff'])
+            S = mzML_Search_Scorer.from_params(params)
+            S.score()
+            return (1, None)
+        except Exception as e:
+            print(f"Error Executing mzml_search_score:\n {e}" )
+            return (0, e)
 
     def ftable_search(params): 
         """
         placeholder
         """
-        pass
+        raise NotImplementedError
 
     # Look at all callables in locals() and pick those whose qualname does not start with __"
     subcommand_func_objs = [x for x in locals().values() if callable(x) and not x.__name__.startswith("__")]
@@ -235,11 +264,13 @@ def cli():
                     parser.add_argument(parameter_spec['short'], 
                                         f'--{key}', 
                                         default=parameter_spec['default'],
-                                        type=parameter_spec['types'][0])
+                                        type=parameter_spec['types'][0],
+                                        help=parameter_spec.get('help', ''))
                 else:
                     parser.add_argument(f'--{key}', 
                                         default=parameter_spec['default'],
-                                        type=parameter_spec['types'][0])
+                                        type=parameter_spec['types'][0],
+                                        help=parameter_spec.get('help', ''))
         return parser
 
     parser = __build_parser()

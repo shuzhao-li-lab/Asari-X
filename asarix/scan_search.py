@@ -1,20 +1,33 @@
+"""
+This module implements the Asari-X scan search functions.
+
+Currently this is only the mzML scan level searcher but 
+future search functions will be added. 
+"""
+
 import json
-import pymzml
 import os
+import logging
 from collections import defaultdict
-from jms.dbStructures import knownCompoundDatabase
+
+import pymzml
 import tqdm
+from jms.dbStructures import knownCompoundDatabase
 
 import logging
 logging.getLogger(__name__)
 #todo - seems that the logging does not always work correctly, see build_KCD
 #todo - the logs are being redirected to khipu.log...
 
-
 class mzML_Searcher():
-    def __init__(self, signatures, mzml_files, ppm):
+    """
+    mzML searcher takes a set of signatures and searches the mzml files for matching peaks
+    """
+    def __init__(self, signatures, mzml_files, ppm, limit=None):
         self.signatures = signatures
-        self.mzml_files = mzml_files[:30]
+        self.mzml_files = mzml_files
+        if limit and isinstance(limit, int):
+            self.mzml_files = self.mzml_files[:min(len(self.mzml_files), limit)]
         self.KCD = self.build_KCD()
         self.ppm = ppm
 
@@ -52,7 +65,7 @@ class mzML_Searcher():
         As the KCD was configured from signatures.
 
         Args:
-            file (_type_): _description_
+            file (string): path to mzml file
 
         Returns:
             _type_: _description_

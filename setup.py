@@ -1,3 +1,9 @@
+"""
+Nothing too special happening here, typical setup.py
+
+Main thing is to define the entrypoints for the GUI and CLI.
+"""
+
 from setuptools import setup, find_packages
 
 with open("asarix/__init__.py") as f:
@@ -10,7 +16,7 @@ with open("requirements.txt", "r") as f:
     requirements = f.read()
 
 setup(
-  name='xasari',
+  name='asarix',
   version=__version__,
   author='Shuzhao Li',
   author_email='shuzhao.li@gmail.com',
@@ -18,7 +24,7 @@ setup(
   description='eXposome data mining based on asari',
   long_description=long_description,
   long_description_content_type="text/markdown",
-  url='https://github.com/shuzhao-li/xasari',
+  url='https://github.com/shuzhao-li/asari-x',
   license='BSD 3-Clause',
   keywords='exposome metabolomics bioinformatics mass spectrometry',
 

@@ -10,6 +10,7 @@ Asari-X is a tool for detecting signatures of exposomic compounds in large metab
 - drugs
 - dietary ingredients
 - microbial products
+- etc.
 
 These compounds are often not present at high frequency or high concentration in human samples, therefore requiring separate computational approaches for detection and monitoring. These are different from the Asari data processing routines used for LC and GC-MS pre-processing.
 
@@ -213,13 +214,12 @@ To score an mzML search result, run the following command:
 Feature Level Scoring
 - 
 
-<TO IMPLEMENT>
+TO IMPLEMENT 
 
 Downstream Analyses using Asari-X Results
 =========================================
 
-<TO ADD>
-
+TO ADD
 
 Future Directions
 =================
