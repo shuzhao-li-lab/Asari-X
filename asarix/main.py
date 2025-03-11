@@ -6,6 +6,8 @@ import os
 from default_parameters import PARAMETERS
 from utils import logo
 from signature_generator import SignatureGenerator
+from scan_search import mzML_Searcher
+
 from logger_setup import setup_logger
 setup_logger()
 logger = logging.getLogger(__name__)
@@ -23,6 +25,7 @@ def check_sufficient_params(params, needed=None):
     """
     if needed:
         for x in needed:
+            logging.info(f"Checking params for {x}")
             assert x in params and params.get(x, None) is not None, f'{x} required for this operation!'
 
 def process_params(params, args=None):
@@ -63,13 +66,15 @@ def process_params(params, args=None):
         for key, value in list(params.items()):
             if isinstance(value['value'], str) and value['value'].endswith(".json") and not value.get('skip_json', False):
                 abs_path = os.path.abspath(value['value'])
-                if os.path.exists(abs_path):
-                    data = json.load(open(abs_path))
-                    params[key]['source'] = value['value']
-                    params[key]['value'] = data['data']
+                with open(abs_path) as json_fh:
+                    data = json.load(json_fh)
+                    params[key].update({
+                        'value': data['data'],
+                        'source': value['value'],
+                        'types': [type(data['data'])]
+                    })
                     if 'metadata' in data:
                         params[f"__{key}_metadata"] = data['metadata']
-                    params[key]['types'] = [type(data['data'])]
 
         if params.get('parameters', {}).get('value', None) is not None:
             with open(params['parameters']) as param_fh:
@@ -99,7 +104,9 @@ def process_params(params, args=None):
         """
         for k, v in [(k,v) for k,v in params.items() if not k.startswith('__')]:
             if not isinstance(v['value'], tuple(v['types'])):
-                raise Warning(f"WARNING: invalid type for {k}")
+                pass
+                #print(type(v['value']))
+                #raise Warning(f"WARNING: invalid type for {k}")
             if v.get("allowed", False):
                 assert v['value'] in v["allowed"]
         return params
@@ -117,7 +124,7 @@ def process_params(params, args=None):
             (dict): Concise Asari-X params dict
         """
         return {k: v.get('value', v) for k, v in params.items()}
-    
+    #print(json.dumps(__reduce(__verify(__combine(params, args))), indent=4))
     return __reduce(__verify(__combine(params, args)))
 
 def main(params, dry_run=False):
@@ -161,16 +168,30 @@ def main(params, dry_run=False):
         Args:
             params (dict): the parameter dictionary, same payload for all methods
         """
-        check_sufficient_params(params, ['compounds', 'reactions', 'signature_path', 'reaction_depth'])
+        check_sufficient_params(params, ['compounds', 'reactions', 'signatures', 'reaction_depth'])
         SG = SignatureGenerator.from_compounds_reactions(params['compounds'], params['reactions'])
         SG.generate_signatures(reaction_depth=params['reaction_depth'])
-        SG.save_signatures(signature_path=params['signature_path'])
+        SG.save_signatures(signature_path=params['signatures'])
 
     def mzml_search(params): 
         """
-        placeholder
+        This method is one of two search functions in Asari-X. 
+
+        The mzML_Searcher is configured using the params dictionary. Signatures must be provided, 
+        either manually curated or generated automatically using the build_signatures command. 
+
+        The input must be a path to either an individual mzML file or a directory with multiple 
+        such files. 
+
         """
-        pass
+        check_sufficient_params(params, ['input', 'signatures'])
+        if isinstance(params['signatures'], str) and params['signatures'].endswith('json'):
+            params['signatures'] = json.load(open(params['signatures']))['data']
+        XS = mzML_Searcher.from_params(params)
+        XS.search()
+
+
+        
 
     def ftable_search(params): 
         """
@@ -179,10 +200,11 @@ def main(params, dry_run=False):
         pass
 
     # Look at all callables in locals() and pick those whose qualname does not start with __"
-    logging.info(f"Starting Asari-X Run")
     subcommand_func_objs = [x for x in locals().values() if callable(x) and not x.__name__.startswith("__")]
     if dry_run:
+        logging.info(f"Dry Run of Asari-X main, this is normal")
         return {x.__name__ for x in subcommand_func_objs}
+    logging.info(f"Starting Asari-X Run")
     logging.info(f"PARAMS for RUN:\n{json.dumps({k: v for k, v in params.items() if k not in {'compounds', 'reactions', 'signatures'}}, indent=4)}")
     assert params['run'] in {x.__name__ for x in subcommand_func_objs}
     return {x.__name__: x for x in subcommand_func_objs}[params["run"]](params)

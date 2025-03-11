@@ -12,6 +12,8 @@ logger = logging.getLogger(__name__)
 
 class SignatureGenerator():
     def __init__(self, compounds, reactions, signatures):
+        print(compounds)
+        print(reactions)
         self.compounds, self.uuid_map = self.__initialize_compounds(compounds)
         self.reactions  = self.__initialize_reactions(reactions)
         self.signatures = signatures

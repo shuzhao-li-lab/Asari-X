@@ -17,6 +17,11 @@ PARAMETERS = {
         "allowed": ["pos", "neg", "mixed"],
         "short": '-m',
     },
+    "mz_tolerance_ppm": {
+        "default": 10,
+        "types": [int],
+        "short": '-z',
+    },
     "input": {
         "default": None,
         "types": [str, type(None)],
@@ -37,7 +42,7 @@ PARAMETERS = {
         "types": [int, type(None)],
         "short": '-d'
     },
-    "signature_path": {
+    "signatures": {
         "default": None,
         "types": [str, type(None)],
         "short": '-s',
