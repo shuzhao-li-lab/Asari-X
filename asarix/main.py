@@ -1,25 +1,26 @@
 import argparse
 import json
-from default_parameters import PARAMETERS
-import sys
 import logging
 import os
 
-
+from default_parameters import PARAMETERS
+from utils import logo
 from signature_generator import SignatureGenerator
-
 from logger_setup import setup_logger
 setup_logger()
 logger = logging.getLogger(__name__)
 
-LOGO = """ 
-###############################
-#                             #
-#           ASARI-X           #
-#                             #
-###############################
-"""
+
 def check_sufficient_params(params, needed=None):
+    """
+    Helper function to check that necessary fields are provided for a given command. Used
+    to print a more useful message than the default if a user does not give the required
+    params. 
+
+    Args:
+        params (dict): Asari-X params dict
+        needed (list, optional): list of required non-None fields in the params dict. Defaults to None.
+    """
     if needed:
         for x in needed:
             assert x in params and params.get(x, None) is not None, f'{x} required for this operation!'
@@ -170,11 +171,14 @@ def main(params, dry_run=False):
 
     def mzml_search(params): 
         """
-        
+        placeholder
         """
         pass
 
     def ftable_search(params): 
+        """
+        placeholder
+        """
         pass
 
     # Look at all callables in locals() and pick those whose qualname does not start with __"
@@ -197,7 +201,7 @@ def cli():
         Returns:
             parser (argparse.ArgumentParser): Asari-X ArgumentParser dynamically generated based on PARAMETERS
         """
-        print(LOGO)
+        print(logo())
         parser = argparse.ArgumentParser(description="Asari-X, eXposome mining based on Asari")
         for key, parameter_spec in PARAMETERS.items():
             if parameter_spec.get("metavar", False):

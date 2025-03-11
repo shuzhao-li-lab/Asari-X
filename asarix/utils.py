@@ -1,6 +1,18 @@
 from collections import defaultdict
 import numpy as np
 
+def logo():
+    """
+    By making this a function, we can reuse it elsewhere.
+    """
+    return  """ 
+###############################
+#                             #
+#           ASARI-X           #
+#                             #
+###############################
+"""
+
 def sum_formula_dicts(formula_dicts):
     _d = defaultdict(int)
     for wd in formula_dicts:
