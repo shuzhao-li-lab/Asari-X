@@ -47,5 +47,14 @@ PARAMETERS = {
         "types": [str, type(None)],
         "short": '-s',
         "skip_json": True
+    },
+    "snr_cutoff": {
+        "default": 2.5,
+        "types": [float, int],
+    },
+    "scan_cutoff": {
+        "default": 0,
+        "types": [int],
     }
+
 }

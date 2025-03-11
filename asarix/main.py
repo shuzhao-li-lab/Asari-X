@@ -7,6 +7,7 @@ from default_parameters import PARAMETERS
 from utils import logo
 from signature_generator import SignatureGenerator
 from scan_search import mzML_Searcher
+from scan_score import mzML_Search_Scorer
 
 from logger_setup import setup_logger
 setup_logger()
@@ -184,14 +185,17 @@ def main(params, dry_run=False):
         such files. 
 
         """
-        check_sufficient_params(params, ['input', 'signatures'])
+        check_sufficient_params(params, ['input', 'signatures', 'mz_tolerance_ppm'])
         if isinstance(params['signatures'], str) and params['signatures'].endswith('json'):
             params['signatures'] = json.load(open(params['signatures']))['data']
         XS = mzML_Searcher.from_params(params)
         XS.search()
 
-
-        
+    def mzml_search_score(params):
+        print("Scoring")
+        S = mzML_Search_Scorer.from_params(params)
+        print(S)
+        S.score()
 
     def ftable_search(params): 
         """

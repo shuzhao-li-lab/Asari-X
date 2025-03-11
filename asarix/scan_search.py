@@ -103,12 +103,12 @@ class mzML_Searcher():
         s = 'formula_mass@ion\tscan_numbers\tintensity\n'
         for k,v in feature_dict.items():
             s += '\t'.join([k, ','.join([str(x) for x in v[0]]), ','.join([str(x) for x in v[1]])] ) + '\n'
-        out_path = os.path.join(".", feature_dict["sample"].replace('.mzML', '.xasari'))
+        out_path = os.path.join(".", feature_dict["sample"].replace('.mzML', '.asarix'))
         with open(out_path, 'w+') as out_fh:
             out_fh.write(s)
 
     def save_scan_data(self, feature_dict):
-        out_path = os.path.join(".", os.path.abspath(feature_dict["sample"]).replace('.mzML', '.scans_ASARIX`.json'))
+        out_path = os.path.join(".", os.path.abspath(feature_dict["sample"]).replace('.mzML', '.scans_ASARIX.json'))
         with open(out_path, 'w+') as out_fh:
             logging.info(f"saving scan data to {out_path}")
             json.dump(feature_dict, out_fh, indent=4)

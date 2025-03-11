@@ -6,24 +6,89 @@ import matplotlib.pyplot as plt
 from utils import consecutive_scans
 from scipy.stats import spearmanr
 import tqdm
+import logging
+import multiprocessing as mp
 
-DEBUG = False
-CUTOFF = 0
-SNR_CUTOFF = 2.5
 
-class ScanScorer():
-    def __init__(self):
+class mzML_Search_Scorer():
+    def __init__(self, snr_cutoff=None, scan_cutoff=None, scan_files=None):
         self.frequencies = {}
         self.max_scans = {}
+        self.snr_cutoff = snr_cutoff
+        self.scan_cutoff = scan_cutoff
+        self.scan_files = scan_files[:1]
+        assert self.snr_cutoff > 0, "snr_cutoff must be positive"
+        assert self.scan_cutoff >= 0, "scan_cutoff must be non-negative"
 
     @staticmethod
-    def digest_signatures(sig_dict, cutoff=CUTOFF):
+    def filter_inputs(input, extension_filter="ASARIX.json"):
+        """
+        This function takes a provide input file or directory, infer if it is a 
+        directory or file and generate an appropriate iterable containing all 
+        absolute paths to all files with the expected extension specified by 
+        extension_filter. 
+
+        Args:
+            input (str): path to mzML or directory with mzML files within it.
+            extension_filter (str, optional): return files matching this extension. Defaults to "mzML".
+
+        Raises:
+            Warning: raise if no mzML files were found
+
+        Returns:
+            list: list of absolute paths to matching files
+        """
+        logging.info(f"Processing {input} for {extension_filter} files")
+        if os.path.isdir(input):
+            logging.info(f"{input} appears to be directory")
+            pass_filter = []
+            for f in os.listdir(input):
+                f = f.rstrip()
+                if f.endswith(extension_filter):
+                    print("\t", f)
+                    pass_filter.append(os.path.join(os.path.abspath(input), f))
+            logging.info(f"{len(pass_filter)} were found in directory")
+            return pass_filter
+        elif os.path.isfile(input):
+            logging.info(f"{input} appears to be a file")
+            if input.endswith(extension_filter):
+                return [os.path.abspath(input)]
+        else:
+            logging.warn(f"{input} could not be processed")
+            raise Warning("Could not infer mzML file locations")
+
+
+    @staticmethod
+    def from_params(params):
+        """
+        Instantiate from Asari-X params
+
+        Args:
+            params (dict): Asari-X 
+
+        Returns:
+            _type_: _description_
+        """
+
+        scan_files = mzML_Search_Scorer.filter_inputs(params['input'], extension_filter=".scans_ASARIX.json")
+        return mzML_Search_Scorer(params['snr_cutoff'], params['scan_cutoff'], scan_files)
+    
+    def score(self):
+        jobs = [(x, self.snr_cutoff, self.scan_cutoff) for x in self.scan_files]
+        with mp.Pool(mp.cpu_count()) as workers:
+            r = list(tqdm.tqdm(workers.imap(self.score_signatures_wrapped, jobs), total=len(self.scan_files)))
+
+    def score_signatures_wrapped(self, job):
+        return self.score_signatures(job[0], job[1], job[2])
+
+    @staticmethod
+    def digest_signatures(sig_dict, scan_cutoff):
         return {
             s: {
-                "scans": np.array([x[0] for x in d if x[1] > cutoff]),
-                "intensities": [x[1] for x in d if x[1] > cutoff],
-                "masses": [x[2] for x in d if x[1] > cutoff],
-                "times": [x[3] for x in d if x[1] > cutoff],
+                "scans": np.array([x[0] for x in d if x[1] > scan_cutoff]),
+                "intensities": [x[1] for x in d if x[1] > scan_cutoff],
+                "masses": [x[2] for x in d if x[1] > scan_cutoff],
+                "times": [x[3] for x in d if x[1] > scan_cutoff],
             } for s, d in sig_dict.items()
         }
     
@@ -57,13 +122,13 @@ class ScanScorer():
         return _t
 
     @staticmethod
-    def score_signatures(file):
+    def score_signatures(file, snr_cutoff, scan_cutoff):
         scores = {"scores": {}}
         sig_dict = json.load(open(file))
-        digested = ScanScorer.digest_signatures(sig_dict['hits'])
-        topo_sig = ScanScorer.topo_sort_signatures(sig_dict['hits'])
+        digested = mzML_Search_Scorer.digest_signatures(sig_dict['hits'], scan_cutoff)
+        topo_sig = mzML_Search_Scorer.topo_sort_signatures(sig_dict['hits'])
         for signature in topo_sig.keys():
-            S = ScanScorer.score_signature(signature, topo_sig, digested, sig_dict["max_scan"])
+            S = mzML_Search_Scorer.score_signature(signature, topo_sig, digested, sig_dict["max_scan"], snr_cutoff)
             for k, v in S.items():
                 if v[0] > 0:
                     if signature not in scores["scores"]:
@@ -78,15 +143,16 @@ class ScanScorer():
                         "integral": v[3],
                         "mz": v[4]
                     })
-        with open(file.replace(".scans.json", ".scores.json"), 'w+') as out_fh:
+        with open(file.replace(".scans_ASARIX.json", ".scores.json"), 'w+') as out_fh:
             for k, v in sig_dict.items():
                 if k != 'hits':
                     scores[k] = v
-            scores = ScanScorer.consolidate_sig_scores(scores)
+            scores = mzML_Search_Scorer.consolidate_sig_scores(scores)
             json.dump(scores, out_fh, indent=4)
 
     @staticmethod
-    def score_signature(signature, topo_sig, digested, max_scans):
+    def score_signature(signature, topo_sig, digested, max_scans, snr_cutoff):
+        print(signature)
         scores = {}
         maps = []
         
@@ -98,7 +164,6 @@ class ScanScorer():
             }
             maps.append(map)
 
-
         scan_sets = [consecutive_scans(digested[iso]["scans"]) for iso in topo_sig[signature]]
         filter_empty = []
         for ss in scan_sets:
@@ -107,7 +172,6 @@ class ScanScorer():
             else:
                 break
         scan_sets = filter_empty
-
         ion_counts = [len(digested[iso]["scans"]) for iso in topo_sig[signature]]
         if scan_sets and scan_sets[0]:
             for index in np.ndindex(tuple([len(s) for s in scan_sets])):
@@ -129,10 +193,9 @@ class ScanScorer():
                     scores[(left_base, apex, right_base)] = (0, 0)
 
                 working_intensities = [[maps[i]["I"][s] for s in working_scan_sets[i]] for i in range(len(working_scan_sets))]
-
                 #subscores
-                working_probs = [ScanScorer.cluster_prob(wss, count, max_scans) for wss, count in zip(working_scan_sets, ion_counts)]
-                snr_filters = [ScanScorer.cluster_snr(wi, SNR_CUTOFF) for wi in working_intensities]
+                working_probs = [mzML_Search_Scorer.cluster_prob(wss, count, max_scans) for wss, count in zip(working_scan_sets, ion_counts)]
+                snr_filters = [mzML_Search_Scorer.cluster_snr(wi, snr_cutoff) for wi in working_intensities]
 
                 correlations = []
                 for i, _ in enumerate(working_scan_sets):
@@ -142,6 +205,7 @@ class ScanScorer():
                     if np.isnan(corr):
                         corr = 0
                     correlations.append(corr)
+
                 score = []
                 integral = 0
                 if snr_filters[0]:
@@ -184,7 +248,6 @@ class ScanScorer():
                 _d["score"] = 0
         scores['signature_map'] = new_signatures
         del scores['sigmap']
-
         return scores
 
             
@@ -207,13 +270,3 @@ class ScanScorer():
             "min": np.min
         }
         return modes[apex_mode](intensities) > modes[baseline_mode](intensities) * snr_cutoff
-
-
-if __name__ == '__main__':
-    import sys
-    import multiprocessing as mp
-    mp.freeze_support()
-    S = ScanScorer()
-    files = [x for x in os.listdir(sys.argv[1]) if x.endswith(".scans.json")]
-    with mp.Pool(8) as workers:
-        r = list(tqdm.tqdm(workers.imap(S.score_signatures, files), total=len(files)))

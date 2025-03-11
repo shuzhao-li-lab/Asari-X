@@ -1,0 +1,9 @@
+V0.5.8:
+    Initial alpha release version for ARPA-H 
+
+    Major Features:
+        - Working CLI
+        - Working mzML scan-level search and scan-level scoring
+        - Theory of operation fully explained in the README.md
+        - Fully refactored and renamed to Asari-X for consistency
+        
