@@ -1,0 +1,14 @@
+{
+    "data": [
+        {
+            "primary_id": "B1970",
+            "primary_db": "FDA_drug_library",
+            "name": "Metformin",
+            "neutral_formula": "C4H11N5",
+            "neutral_formula_mass": 165.07812309054998,
+            "charged_formula": null,
+            "charge": 0,
+            "charged_formula_mass": null
+        }
+    ]
+}

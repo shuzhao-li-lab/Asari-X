@@ -1,0 +1,81 @@
+INFO:root:instantiating log: 20250423_204954
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 90 compounds found in input.
+INFO:root:total of 0 compounds parsed correctly.
+INFO:root:total of 63 reactions found in input.
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 0 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:instantiating log: 20250423_210949
+INFO:root:instantiating log: 20250423_211229
+INFO:root:instantiating log: 20250423_211351
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:generating signatures to depth 3
+INFO:root:generating product of reactions to depth 4
+INFO:root:instantiating log: 20250423_212234
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:generating signatures to depth 3
+INFO:root:generating product of reactions to depth 4
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:generating signatures to depth 3
+INFO:root:generating product of reactions to depth 4
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:generating signatures to depth 3
+INFO:root:generating product of reactions to depth 4
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:generating signatures to depth 3
+INFO:root:generating product of reactions to depth 4
+INFO:root:instantiating log: 20250423_212418
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:generating signatures to depth 3
+INFO:root:generating product of reactions to depth 4
+INFO:root:instantiating log: 20250423_212505
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:generating signatures to depth 3
+INFO:root:generating product of reactions to depth 4
+INFO:root:creating signature generator from compounds and reactions
+INFO:root:total of 1 compounds found in input.
+INFO:root:total of 1 compounds parsed correctly.
+INFO:root:total of 1 reactions found in input.
+INFO:root:generating signatures to depth 3
+INFO:root:generating product of reactions to depth 4
+INFO:root:generated 4 reaction permutations
+INFO:root:generation produced 4 signatures
+INFO:root:saving signatures to ./metformin_signatures.json
+INFO:root:building KCD from signatures
+INFO:root:building KCD from signatures
+INFO:root:searching /

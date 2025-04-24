@@ -1,0 +1,13 @@
+{
+    "data":
+    [
+        {
+            "elemental_difference": "O",
+            "reaction_name": "None",
+            "mass_delta": 0,
+            "frequency": 87,
+            "manually_curated": "yes",
+            "formula_dict": {}
+        }
+    ]
+}
